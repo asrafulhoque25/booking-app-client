@@ -1,0 +1,38 @@
+.container{
+    max-width: 1230px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.commonTitle{
+    font-size: 28px;
+    color: #282525;
+}
+.common-title-border{
+  border-left: 4px solid rgb(162, 98, 255);
+  padding-left: 20px;
+  .title-hints{
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(162, 98, 255);;
+  }
+}
+
+.headerBtn {
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: rgb(162, 98, 255);
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 18px;
+        color: #fafafa;
+        transition: 0.2s all linear;
+        &:hover {
+            background-color: rgb(116, 37, 233);
+        }
+
+        &.searchBtn {
+            width: 100%;
+        }
+    }
