@@ -11,29 +11,37 @@ const Navbar = () => {
     };
 
   return (
-    <div className="navbar">
-      <div className="navContainer">
-        <Link to='/' className="logo" >
-          <img src={logo} alt="logo" />
-        </Link>
-        <div className="navItems">
-          { !user?.email &&
-            <>
-            <Link to='/registration' className="navButton text-decoration-none">Register</Link>
-            <Link to='/signup' className="navButton text-decoration-none">Login</Link>
-            </>
-          }
+      <div className="navbar">
+          <div className="navContainer">
+              <Link to='/'>
+                  <span className="logo">
+                      <img src={logo} alt="" />
+                  </span>
+              </Link>
+              <div className="navItems">
+                  {!user?.email && (
+                      <>
+                          <Link to="/registration" className="navButton text-decoration-none">
+                              Register
+                          </Link>
+                          <Link to="/signup" className="navButton text-decoration-none">
+                              Login
+                          </Link>
+                      </>
+                  )}
 
-          { user?.email &&
-            <>
-            <Link className="text-success text-decoration-none fw-bold">{user?.name}</Link>
-            <Link className="navButton text-decoration-none" onClick={handleLogout}>Logout</Link>
-            </>
-          }
-        </div>
+                  {user?.email && (
+                      <>
+                          <Link className="text-success text-decoration-none fw-bold">{user?.name}</Link>
+                          <Link className="navButton text-decoration-none" onClick={handleLogout}>
+                              Logout
+                          </Link>
+                      </>
+                  )}
+              </div>
+          </div>
       </div>
-    </div>
-  )
+  );
 }
 
 export default Navbar

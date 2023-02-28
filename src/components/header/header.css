@@ -1,0 +1,144 @@
+.header {
+  color: rgb(40, 37, 37);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-height: 400px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.header .headerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px 0px 100px 0px;
+  text-align: center;
+}
+.header .headerContainer.listMode {
+  margin: 20px 0px 0px 0px;
+}
+.header .headerTitle {
+  font-weight: 800;
+  font-size: 70px;
+  line-height: 80px;
+  padding-top: 80px;
+}
+.header .headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+.header .titleColor {
+  color: rgb(162, 98, 255);
+}
+.header .headerDesc {
+  margin: 20px 0px;
+}
+.header .banner-btn {
+  margin-bottom: 100px;
+  transition: 0.1s all linear;
+}
+.header .banner-btn:hover {
+  transform: translateY(-3px);
+}
+.header .headerBtn {
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(162, 98, 255);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fafafa;
+  transition: 0.2s all linear;
+}
+.header .headerBtn:hover {
+  background-color: rgb(116, 37, 233);
+}
+.header .headerBtn.searchBtn {
+  width: 100%;
+}
+.header .booking-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  z-index: 33;
+  background: #fbf7ff;
+  padding: 30px;
+  border-radius: 10px;
+  margin: auto;
+}
+.header .booking-wrapper .searchTitle {
+  color: #282525;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+.header .booking-wrapper .headerSearch {
+  position: relative;
+}
+.header .booking-wrapper .headerIcon {
+  color: lightgray;
+}
+.header .booking-wrapper .headerSearchItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid rgb(237, 225, 255);
+  height: 100%;
+  padding: 0 20px;
+  min-height: 50px;
+  background-color: #fff;
+  height: 100%;
+  cursor: pointer;
+}
+.header .booking-wrapper .searchBtnWrapper {
+  min-height: 50px;
+  height: 100%;
+}
+.header .booking-wrapper .headerSearchInput {
+  border: none;
+  outline: none;
+  /* border-right: 2px solid rgb(237, 225, 255); */
+}
+.header .booking-wrapper .headerSearchText {
+  color: lightgray;
+  cursor: pointer;
+  /* border-right: 2px solid rgb(237, 225, 255); */
+}
+.header .booking-wrapper .date {
+  position: absolute;
+  top: 60px;
+  z-index: 2;
+}
+.header .booking-wrapper .options {
+  z-index: 2;
+  position: absolute;
+  top: 60px;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+.header .booking-wrapper .optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.header .booking-wrapper .optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  color: black;
+}
+.header .booking-wrapper .optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  cursor: pointer;
+  background-color: white;
+}
+.header .booking-wrapper .optionCounterButton:disabled {
+  cursor: not-allowed;
+}/*# sourceMappingURL=header.css.map */

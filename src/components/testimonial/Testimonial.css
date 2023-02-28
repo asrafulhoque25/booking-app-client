@@ -1,0 +1,80 @@
+.testimonialSwiper {
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 143px;
+  height: 100% !important;
+}
+.testimonialSwiper .swiper-slide {
+  height: auto !important;
+}
+.testimonialSwiper .swiper-slide .testimonialItem {
+  height: 100% !important;
+}
+.testimonialSwiper .swiper-button-next {
+  top: 40% !important;
+  background: linear-gradient(45deg, rgba(179, 129, 254, 0.8156862745), rgba(196, 156, 253, 0.7882352941));
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all linear;
+}
+.testimonialSwiper .swiper-button-next::after {
+  content: "" !important;
+  background-image: url("../../assets/images/next.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+}
+.testimonialSwiper .swiper-button-next:hover {
+  background: linear-gradient(90deg, #b381fe, #c49cfd);
+  transform: translateY(-3px);
+}
+.testimonialSwiper .swiper-button-prev {
+  top: 40% !important;
+  background: linear-gradient(45deg, rgba(179, 129, 254, 0.8156862745), rgba(196, 156, 253, 0.7882352941));
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all linear;
+}
+.testimonialSwiper .swiper-button-prev::after {
+  content: "" !important;
+  background-image: url("../../assets/images/prev.png");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: 30px;
+}
+.testimonialSwiper .swiper-button-prev:hover {
+  background: linear-gradient(90deg, #b381fe, #c49cfd);
+  transform: translateY(-3px);
+}
+
+.BgLightWhite {
+  background-color: #C8CAD5;
+}
+
+.testimonialItem {
+  box-shadow: 15px 5px 20px rgba(60, 30, 20, 0.03);
+  min-height: 60px;
+}
+.testimonialItem .personImg {
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  background-image: linear-gradient(transparent, #f5f1fe);
+}
+.testimonialItem .QuoteIcon {
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(#e8e7f7, transparent);
+  bottom: -35px;
+  right: 25px;
+}/*# sourceMappingURL=Testimonial.css.map */

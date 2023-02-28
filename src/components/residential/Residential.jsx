@@ -1,12 +1,12 @@
 import React from "react";
-import "./Residential.scss";
+import { Link } from "react-router-dom";
 import residential1 from "../../assets/images/residential1.jpg";
 import residential2 from "../../assets/images/residential2.jpg";
 import residential3 from "../../assets/images/residential3.jpg";
 import residential4 from "../../assets/images/residential4.jpg";
 import residential5 from "../../assets/images/residential5.jpg";
 import useFetch from "../../hooks/useFetch";
-import { Link } from "react-router-dom";
+import "./Residential.scss";
 const Residential = () => {
     const { data, loading, error } = useFetch("http://localhost:5000/api/hotels/countByType");
 

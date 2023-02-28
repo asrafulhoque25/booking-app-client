@@ -9,6 +9,11 @@ import Linkedin from '../../assets/images/linkedin-white.svg';
 
 
 const Footer = () => {
+
+  const runningDate = new Date();
+  let runningYear = runningDate.getFullYear();
+
+
   return (
     <footer className='footer bgBlack'>
       <div className="footerWidgetArea">
@@ -113,7 +118,7 @@ const Footer = () => {
           <div className="bottomWrapper d-flex gap-3 gap-md-5 justify-content-center justify-content-md-between align-items-center flex-wrap py-3">
             <div className="copyRight fs-18 fw-normal textGray4">
               <p className='mb-0 text-white'>
-                &copy; 2022 tryselfmade. All Rights Reserved
+                &copy; {runningYear} MERN-BOOKING-APP. All Rights Reserved
               </p>
             </div>
             <div className="social">

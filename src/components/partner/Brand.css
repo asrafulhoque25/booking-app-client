@@ -1,0 +1,41 @@
+.brand-area {
+  padding: 60px 0;
+  background-color: #fbf7ff;
+}
+
+.brand-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 11vh;
+  width: 12.5vw;
+  /*line 43 is very important. since we have 16 items, width of the Marquee which is 200vw must be devided between them. which turns out to be 12.5vw*/
+  margin: 10px;
+  border-radius: 15px;
+  padding: 0 30px;
+}
+
+.Marquees {
+  overflow-x: hidden;
+}
+
+.Marquee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200vw;
+  height: 13vh;
+}
+
+.FirstRow {
+  animation: Scroll 20s linear infinite;
+}
+
+@keyframes Scroll {
+  0% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+}/*# sourceMappingURL=Brand.css.map */

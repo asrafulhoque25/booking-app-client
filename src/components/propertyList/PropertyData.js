@@ -8,6 +8,9 @@ import property7 from '../../assets/images/property7.jpg'
 import property8 from '../../assets/images/property8.jpg'
 import property9 from '../../assets/images/property9.jpg'
 
+
+
+
 export const propertyData =[
     {
     propertyImg: property1,

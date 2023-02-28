@@ -12,6 +12,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import bannerImg from '../../assets/images/hero-bg.png';
+import useSearch from "../../hooks/useSearch";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -32,6 +33,8 @@ const Header = ({ type }) => {
 
   const navigate = useNavigate();
 
+  const {dispatch} = useSearch();
+
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -42,6 +45,7 @@ const Header = ({ type }) => {
   };
 
   const handleSearch = () => {
+    dispatch({ type: "NEW_SEARCH", payload: { destination, date, options } });
     navigate("/hotels", { state: { destination, date, options } });
   };
 
@@ -57,7 +61,7 @@ const Header = ({ type }) => {
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
-              Find your perfect <br /> place to <span className="titleColor">live</span>
+              Find your perfect <br /> place to <span className="titleColor">live</span> 
             </h1>
             <p className="headerDesc">
               Get rewarded for your booking – unlock instant savings of 10% 

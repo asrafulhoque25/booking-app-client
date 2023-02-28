@@ -1,0 +1,53 @@
+.featureWrapper {
+  background: #fbf7ff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.featureWrapper .featureImg {
+  border-radius: 10px 10px 0 0;
+}
+.featureWrapper .featureContent {
+  padding: 20px;
+}
+.featureWrapper .featureContent .featureTitle .title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333333;
+}
+.featureWrapper .featureContent .bookingInfo {
+  border-top: 1px solid #eee;
+  padding-top: 18px;
+  margin-top: 15px;
+}
+.featureWrapper .featureContent .bookingInfo .bookingBtn {
+  display: inline-block;
+  min-width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background: linear-gradient(45deg, #b381fe, #c49cfd);
+  color: #fff;
+  outline: none;
+  padding: 0px 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+.featureWrapper .featureContent .bookingInfo .bookingBtn:hover {
+  background: linear-gradient(45deg, #c49cfd, #b381fe);
+  color: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+.featureWrapper .featureContent .bookingInfo .bookingPrice {
+  font-size: 14px;
+  color: #1f2732;
+  font-weight: 500;
+  line-height: 1.2;
+}/*# sourceMappingURL=featured.css.map */

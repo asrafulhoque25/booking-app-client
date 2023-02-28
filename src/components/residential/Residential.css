@@ -1,0 +1,57 @@
+.residentialTitle {
+  color: #282525;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.residential-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.residential-item:hover img {
+  transform: scale(1.1) rotate(5deg);
+}
+.residential-item img {
+  width: 100%;
+  transition: 0.5s;
+  transform: scale(1) rotate(0deg);
+}
+.residential-item .residential-content {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  z-index: 1;
+}
+.residential-item .residential-content .title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  transition: 0.2s all linear;
+}
+.residential-item .residential-content .title:hover {
+  color: #c49cfd;
+}
+.residential-item .residential-content .pra {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.residential-item::after {
+  content: "";
+  background: #061356;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  content: "";
+  opacity: 0.4;
+}/*# sourceMappingURL=Residential.css.map */

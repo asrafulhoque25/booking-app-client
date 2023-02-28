@@ -7,9 +7,6 @@ import Brand from "../../components/partner/Brand";
 import PropertyList from "../../components/propertyList/PropertyList";
 import Residential from "../../components/residential/Residential";
 import Testimonial from "../../components/testimonial/Testimonial";
-import MailList from "../../components/mailList/MailList";
-import FeaturedProperties from "../../components/featuredProperties/FeaturedProperties";
-
 
 const Home = () => {
   return (
@@ -23,8 +20,8 @@ const Home = () => {
         <Testimonial />
         <Blog />
         <Brand />
-        <FeaturedProperties/>
-        <MailList />
+        {/* <FeaturedProperties/> */}
+        {/* <MailList/>*/}
         <Footer/> 
       </div>
     </div>
