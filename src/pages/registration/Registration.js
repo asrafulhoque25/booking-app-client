@@ -74,7 +74,7 @@ const Registration = () => {
 
                                       <p className="ff-inter text-clr-dark-3 fs-14 lh-22 mt-4">
                                           Already have an account?{" "}
-                                          <Link to="/signup" className="signup-btn fw-semiBold">
+                                          <Link to="/signin" className="signup-btn fw-semiBold">
                                               Login
                                           </Link>
                                       </p>

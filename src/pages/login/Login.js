@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { FloatingLabel, Form } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/AuthContext';
 import Logo from "../../assets/images/logo.png";
 
@@ -12,9 +12,16 @@ const Login = () => {
        password: undefined,
    });
 
-   const { loading, error, dispatch } = useAuth();
+    const { loading, error, dispatch } = useAuth();
+    
+    const location = useLocation();
+    const navigate = useNavigate();
 
-   const navigate = useNavigate();
+    let from = location.state?.from?.pathname || "/";
+
+
+     console.log(location.state);
+    
 
    const handleChange = (e) => {
        setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -32,7 +39,12 @@ const Login = () => {
           
 
            if (res?.data?.details?.email) {
-               navigate("/");
+               
+               navigate(from, { replace: true });
+           }
+
+           if (res?.data?.details?.isAdmin) {
+             navigate("/admin/dashboard");
            }
        } catch (err) {
            dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });

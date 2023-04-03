@@ -74,7 +74,7 @@ const PropertyList = () => {
 
 ]
 
-  console.log(data.map(i=> console.log(i)));
+ 
 
 
   return (

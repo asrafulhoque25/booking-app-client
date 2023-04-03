@@ -1,19 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.scss';
-import FooterLogo from '../../assets/images/logo.png';
 import Facebook from '../../assets/images/facebook-white.svg';
-import Twitter from '../../assets/images/twitter-icon.svg';
 import Instagram from '../../assets/images/instagram-white.svg';
 import Linkedin from '../../assets/images/linkedin-white.svg';
+import './Footer.scss';
 
 
 const Footer = () => {
-
-  const runningDate = new Date();
-  let runningYear = runningDate.getFullYear();
-
-
   return (
     <footer className='footer bgBlack'>
       <div className="footerWidgetArea">
@@ -118,7 +111,7 @@ const Footer = () => {
           <div className="bottomWrapper d-flex gap-3 gap-md-5 justify-content-center justify-content-md-between align-items-center flex-wrap py-3">
             <div className="copyRight fs-18 fw-normal textGray4">
               <p className='mb-0 text-white'>
-                &copy; {runningYear} MERN-BOOKING-APP. All Rights Reserved
+                &copy; 2023 MERN Booking App. All Rights Reserved
               </p>
             </div>
             <div className="social">
