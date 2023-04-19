@@ -31,11 +31,11 @@ const stars = Array(5).fill(0);
             <h2 className="title-hints">Explore Facilities</h2>
           </div>
           {
-            data && propertyTypeImage?.map((img, index) =>{
+            data?.map((item, index) =>{
               return (
                   <div className="col-xl-4">
                       <div className="featureWrapper">
-                          <img src={img} className="img-fluid featureImg" alt="img" />
+                          <img src={item?.photos?.[0] ? item?.photos?.[0] : Hotel} className="img-fluid featureImg" alt="img" />
                           <div className="featureContent">
                               <div className="featureTitle">
                                   <div>

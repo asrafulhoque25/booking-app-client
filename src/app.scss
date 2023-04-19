@@ -1,43 +1,48 @@
-.container{
-    max-width: 1230px;
-    width: 100%;
-    margin: auto;
-    padding: 0 15px;
+.container {
+  max-width: 1230px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
 }
-.commonTitle{
-    font-size: 28px;
-    color: #282525;
+.commonTitle {
+  font-size: 28px;
+  color: #282525;
 }
-.common-title-border{
+.common-title-border {
   border-left: 4px solid rgb(162, 98, 255);
   padding-left: 20px;
-  .title-hints{
+  .title-hints {
     font-size: 24px;
     font-weight: 700;
-    color: rgb(162, 98, 255);;
+    color: rgb(162, 98, 255);
   }
 }
 
 .headerBtn {
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        background-color: rgb(162, 98, 255);
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 18px;
-        color: #fafafa;
-        transition: 0.2s all linear;
-        &:hover {
-            background-color: rgb(116, 37, 233);
-        }
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(162, 98, 255);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fafafa;
+  transition: 0.2s all linear;
+  &:hover {
+    background-color: rgb(116, 37, 233);
+  }
 
-        &.searchBtn {
-            width: 100%;
-        }
+  &.searchBtn {
+    width: 100%;
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: #ddd;
     }
+  }
+}
 
-    .divider {
+.divider {
   opacity: 0.6;
   border-top: 1px solid;
   color: #e5effe !important;
@@ -68,8 +73,8 @@
   color: #a6acbe;
 }
 
-.btn{
-  &:disabled{
+.btn {
+  &:disabled {
     cursor: not-allowed;
     background-color: #ddd;
     border: none;

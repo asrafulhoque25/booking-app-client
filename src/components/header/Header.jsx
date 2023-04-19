@@ -178,7 +178,7 @@ const Header = ({ type }) => {
                  </div>
                   <div className="col-xl-2">
                     <div className="searchBtnWrapper">
-                      <button className="headerBtn searchBtn" onClick={handleSearch}>
+                      <button className="btn headerBtn searchBtn" disabled={!destination} onClick={handleSearch}>
                         Search
                       </button>
                     </div>

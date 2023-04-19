@@ -7,11 +7,11 @@ import RoomModal from './RoomModal';
 const DeleteBtn = ({ data, loading }) => {
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${data?._id}`);
+      await axios.delete(`http://localhost:5000/api/rooms/${data?._id}/`);
 
-      setTimeout(() => {
-        window.location.reload();
-      }, "2000");
+      // setTimeout(() => {
+      //   window.location.reload();
+      // }, "2000");
     } catch (err) {
       console.log(err);
     }
@@ -32,7 +32,7 @@ const Rooms = () => {
 
       const { data, loading, reFetch, error } = useFetch(
         "http://localhost:5000/api/rooms"
-    );
+  );
     
     return (
       <div>
@@ -64,7 +64,10 @@ const Rooms = () => {
                   <td>{room?.roomNumbers.length}</td>
                   <td>
                     <RoomModal btnName="Edit" data={room} />
-                    <DeleteBtn data={room} loading={loading} />
+                    <DeleteBtn
+                      data={room}
+                      loading={loading}
+                    />
                   </td>
                 </tr>
               );

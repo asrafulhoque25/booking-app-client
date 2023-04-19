@@ -46,6 +46,22 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
     }
   };
 
+   const handleRoomNumberChange = (index, event) => {
+     const { name, value } = event.target;
+
+     // Create a new array with the updated room number object
+     const newRoomNumbers = editData.roomNumbers.map((roomNumber, i) => {
+       if (i === index) {
+         return { ...roomNumber, [name]: value };
+       } else {
+         return roomNumber;
+       }
+     });
+
+     // Update the state with the new room numbers array
+     setEditData({ ...editData, roomNumbers: newRoomNumbers });
+   };
+
   const handleCreate = async (e) => {
     e.preventDefault();
 
@@ -79,7 +95,7 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/hotels/${editData?._id}`,
+        `http://localhost:5000/api/rooms/${editData?._id}`,
         updateRoom
       );
 
@@ -161,26 +177,41 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
                 onChange={handleChange}
               />
             </FloatingLabel>
-            <FloatingLabel
-              controlId="roomNumbers"
-              label="Room Numbers (Give comma between room numbers)"
-              className="mb-3"
-            >
-              <Form.Control
-                type="text-area"
-                name="roomNumbers"
-                placeholder="Give comma between room numbers... "
-                height={300}
-                value={
-                  addRoom
-                    ? info?.roomNumbers
-                    : editData?.roomNumbers?.map((room) => room?.number)
-                }
-                onChange={
-                  addRoom ? (e) => setRooms(e.target.value) : handleChange
-                }
-              />
-            </FloatingLabel>
+            {addRoom && (
+              <FloatingLabel
+                controlId="roomNumbers"
+                label="Room Numbers (Give comma between room numbers)"
+                className="mb-3"
+              >
+                <Form.Control
+                  type="text-area"
+                  name="roomNumbers"
+                  placeholder="Give comma between room numbers... "
+                  height={300}
+                  value={info?.roomNumbers}
+                  onChange={(e) => setRooms(e.target.value)}
+                />
+              </FloatingLabel>
+            )}
+            <Row>
+              {editData?.roomNumbers.map((roomNumber, index) => (
+                <Col xs={6} md={4} lg={3} key={index}>
+                  <FloatingLabel
+                    controlId="roomNumbers"
+                    label={`Room Number ${index + 1}`}
+                    className="mb-3"
+                  >
+                    <Form.Control
+                      type="text"
+                      id={`roomNumber${index}`}
+                      name="number"
+                      value={roomNumber.number}
+                      onChange={(event) => handleRoomNumberChange(index, event)}
+                    />
+                  </FloatingLabel>
+                </Col>
+              ))}
+            </Row>
             <Row>
               <Col>
                 <FloatingLabel controlId="hotelId" label="Select Hotel">
@@ -196,10 +227,7 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
                       ? "loading"
                       : hotelData &&
                         hotelData?.map((hotel) => (
-                          <option
-                            key={hotel._id}
-                            value={hotel._id}
-                          >
+                          <option key={hotel._id} value={hotel._id}>
                             {hotel.name}
                           </option>
                         ))}
@@ -219,3 +247,7 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
 };
 
 export default RoomModal;
+
+
+
+

@@ -47,7 +47,8 @@ const Hotel = () => {
     setSlideNumber(newSlideNumber)
   };
 
-  const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+    const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+    
   function dayDifference(date1, date2) {
       const timeDiff = Math.abs(date2?.getTime() - date1?.getTime());
       const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
@@ -55,8 +56,8 @@ const Hotel = () => {
   }
 
   const days = dayDifference(date[0]?.endDate, date[0]?.startDate);
-
-  console.log(date[0]?.endDate);
+    
+    const totalCost = days * data.cheapestPrice * options.room;
 
   return (
       <div>
@@ -102,10 +103,10 @@ const Hotel = () => {
                           <h1>Perfect for a {days}-night stay!</h1>
                           <span>Located in the real heart of Krakow, this property has an excellent location score of 9.8!</span>
                           <h2>
-                              <b>${days * data.cheapestPrice * options.room}</b> ({days} nights)
+                              <b>${totalCost}</b> ({days} nights)
                           </h2>
 
-                          <BookingModal data={data} />
+                          <BookingModal data={data} totalCost={totalCost} totalDays={days} />
                       </div>
                   </div>
               </div>

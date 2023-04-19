@@ -11,10 +11,10 @@ import useFetch from "../../hooks/useFetch";
 const List = () => {
 
   const location = useLocation();
-  const [destination, setDestination] = useState(location.state.destination);
-  const [date, setDate] = useState(location.state.date);
+  const [destination, setDestination] = useState(location?.state?.destination);
+  const [date, setDate] = useState(location?.state?.date);
   const [openDate, setOpenDate] = useState(false);
-  const [options, setOptions] = useState(location.state.options);
+  const [options, setOptions] = useState(location?.state?.options);
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
