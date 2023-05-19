@@ -1,12 +1,12 @@
-import "./list.css";
-import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
 import { format } from "date-fns";
+import { useState } from "react";
 import { DateRange } from "react-date-range";
+import { useLocation } from "react-router-dom";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/navbar/Navbar";
 import SearchItem from "../../components/searchItem/SearchItem";
 import useFetch from "../../hooks/useFetch";
+import "./list.css";
 
 const List = () => {
 
@@ -18,7 +18,7 @@ const List = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
-  const { data, loading, error, reFetch } = useFetch(`http://localhost:5000/api/hotels?city=${destination}&min=${min || 0}&max=${max || 9999}`);
+  const { data, loading, error, reFetch } = useFetch(`https://booking-app-api-bvpw.onrender.com/api/hotels?city=${destination}&min=${min || 0}&max=${max || 9999}`);
 
   const handleClick = () => {
       reFetch();

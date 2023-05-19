@@ -46,7 +46,7 @@ const HotelModal = ({ data, loading, reFetch, btnName, addHotel }) => {
 
     try {
       await axios.post(
-        `http://localhost:5000/api/hotels/`,
+        `https://booking-app-api-bvpw.onrender.com/api/hotels/`,
         hotelInfo
       );
 
@@ -102,7 +102,7 @@ const HotelModal = ({ data, loading, reFetch, btnName, addHotel }) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/hotels/${editData?._id}`,
+        `https://booking-app-api-bvpw.onrender.com/api/hotels/${editData?._id}`,
         updateHotel
       );
 

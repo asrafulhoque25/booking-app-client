@@ -1,20 +1,20 @@
-import "./hotel.css";
-import Navbar from "../../components/navbar/Navbar";
+import {
+    faCircleArrowLeft,
+    faCircleArrowRight,
+    faCircleXmark,
+    faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import BookingModal from "../../components/bookingModal/BookingModal";
+import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import MailList from "../../components/mailList/MailList";
-import Footer from "../../components/footer/Footer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircleArrowLeft,
-  faCircleArrowRight,
-  faCircleXmark,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import Navbar from "../../components/navbar/Navbar";
 import useFetch from "../../hooks/useFetch";
-import { useParams } from "react-router-dom";
 import useSearch from "../../hooks/useSearch";
-import BookingModal from "../../components/bookingModal/BookingModal";
+import "./hotel.css";
 
 const Hotel = () => {
 
@@ -26,7 +26,7 @@ const Hotel = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [open, setOpen] = useState(false);
 
-   const { data, loading, error } = useFetch(`http://localhost:5000/api/hotels/find/${id}`);
+   const { data, loading, error } = useFetch(`https://booking-app-api-bvpw.onrender.com/api/hotels/find/${id}`);
 
  
 

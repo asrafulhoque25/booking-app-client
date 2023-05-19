@@ -3,13 +3,12 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import useFetch from '../../hooks/useFetch';
 import HotelModal from './HotelModal';
-import UserAvator from "../../assets/images/parson5.png";
 
 
 const DeleteBtn = ({ data, loading, reFetch }) => {
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/hotels/${data?._id}`);
+      await axios.delete(`https://booking-app-api-bvpw.onrender.com/api/hotels/${data?._id}`);
 
       // setTimeout(() => {
       //   window.location.reload();
@@ -35,7 +34,7 @@ const DeleteBtn = ({ data, loading, reFetch }) => {
 const Hotels = () => {
 
       const { data, loading, reFetch, error } = useFetch(
-        "http://localhost:5000/api/hotels"
+        "https://booking-app-api-bvpw.onrender.com/api/hotels"
       );
     return (
       <div>

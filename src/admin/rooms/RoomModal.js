@@ -7,7 +7,7 @@ import useFetch from '../../hooks/useFetch';
 const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
 
   const { data: hotelData, loading, error } = useFetch(
-    "http://localhost:5000/api/hotels"
+    "https://booking-app-api-bvpw.onrender.com/api/hotels"
   );
 
   const [show, setShow] = useState(false);
@@ -73,7 +73,7 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
     };
 
     try {
-      await axios.post(`http://localhost:5000/api/rooms/${hotelId}`, newRoom);
+      await axios.post(`https://booking-app-api-bvpw.onrender.com/api/rooms/${hotelId}`, newRoom);
 
       handleClose();
       reFetch();
@@ -95,7 +95,7 @@ const RoomModal = ({ data, btnName, addRoom, reFetch }) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/rooms/${editData?._id}`,
+        `https://booking-app-api-bvpw.onrender.com/api/rooms/${editData?._id}`,
         updateRoom
       );
 

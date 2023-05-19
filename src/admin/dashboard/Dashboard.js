@@ -8,8 +8,8 @@ const Dashboard = () => {
 
   const [menuOpen, setMenuOpen] = useState(true);
   
-  const { data } = useFetch("http://localhost:5000/api/users");
-  const { data:hotels } = useFetch("http://localhost:5000/api/hotels");
+  const { data } = useFetch("https://booking-app-api-bvpw.onrender.com/api/users");
+  const { data:hotels } = useFetch("https://booking-app-api-bvpw.onrender.com/api/hotels");
 
 
   return (

@@ -8,7 +8,7 @@ import residential5 from "../../assets/images/residential5.jpg";
 import useFetch from "../../hooks/useFetch";
 import "./Residential.scss";
 const Residential = () => {
-    const { data, loading, error } = useFetch("http://localhost:5000/api/hotels/countByType");
+    const { data, loading, error } = useFetch("https://booking-app-api-bvpw.onrender.com/api/hotels/countByType");
 
     const propertyType = [
         {

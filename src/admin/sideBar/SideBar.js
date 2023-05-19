@@ -19,8 +19,7 @@ const SideBar = ({ menuOpen, setMenuOpen }) => {
         <div className="logo-panel">
           <Link
             to="/admin/dashboard"
-            className="text-decoration-none fs-5 fw-bold text-white"
-          >
+            className="text-decoration-none fs-5 fw-bold text-white" >
             {/* <img src={Logo} alt={Logo} /> */}
             Admin Dashboard
           </Link>

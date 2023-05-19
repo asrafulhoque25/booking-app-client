@@ -9,7 +9,7 @@ const DeleteBtn = ({ data, loading }) => {
   
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/users/${data?._id}`);
+      await axios.delete(`https://booking-app-api-bvpw.onrender.com/api/users/${data?._id}`);
 
       setTimeout(() => {
         window.location.reload();
@@ -31,7 +31,7 @@ const UsersTable = () => {
   // const [updateMode, setUpdateMode] = useState(false);
 
     const { data, loading, error } = useFetch(
-      "http://localhost:5000/api/users"
+      "https://booking-app-api-bvpw.onrender.com/api/users"
   );
   
   

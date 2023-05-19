@@ -73,7 +73,7 @@ const BookingModal = ({ data, totalCost, totalDays }) => {
     loading,
       error,
     
-    } = useFetch(`http://localhost:5000/api/hotels/room/${data?._id}`);
+    } = useFetch(`https://booking-app-api-bvpw.onrender.com/api/hotels/room/${data?._id}`);
     
     const getRoomNumer = roomData?.map((item) => {
        return item.roomNumbers.filter((room) => {
@@ -93,7 +93,7 @@ const BookingModal = ({ data, totalCost, totalDays }) => {
       await Promise.all(
         selectedRooms.map((roomId) => {
           const res = axios.put(
-            `http://localhost:5000/api/rooms/availability/${roomId}`,
+            `https://booking-app-api-bvpw.onrender.com/api/rooms/availability/${roomId}`,
             {
               dates: alldates,
               bookingInfo: {

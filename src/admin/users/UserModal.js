@@ -43,7 +43,7 @@ const UserModal = ({data }) => {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/users/${editData?._id}`,
+        `https://booking-app-api-bvpw.onrender.com/api/users/${editData?._id}`,
         updateCurrentUser
       );
 

@@ -22,7 +22,7 @@ SwiperCore.use([EffectCoverflow, Pagination ]);
 const PropertyList = () => {
 
    const { data, loading, error } = useFetch(
-    "http://localhost:5000/api/hotels/countByCity?cities=coxbazar,dhaka,sylhet,chittagong,khulna,sreemangal,bandarban,rajshahi,rangamati"
+    "https://booking-app-api-bvpw.onrender.com/api/hotels/countByCity?cities=coxbazar,dhaka,sylhet,chittagong,khulna,sreemangal,bandarban,rajshahi,rangamati"
   );
 
   const propertyData =[

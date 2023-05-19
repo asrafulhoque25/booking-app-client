@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import DemoImg from '../../assets/images/feature5.jpg'
 import "./searchItem.css";
 
 const SearchItem = ({ item }) => {
     return (
         <div className="searchItem">
-            <img src={item?.photos[0]} alt="img" className="siImg" />
+            <img src={item?.photos[0] ? item?.photos[0] : DemoImg} alt="img" className="siImg" />
             <div className="siDesc">
                 <h1 className="siTitle">{item?.title}</h1>
                 <span className="siDistance">{item?.distance}</span>

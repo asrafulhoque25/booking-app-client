@@ -7,7 +7,7 @@ import RoomModal from './RoomModal';
 const DeleteBtn = ({ data, loading }) => {
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/api/rooms/${data?._id}/`);
+      await axios.delete(`https://booking-app-api-bvpw.onrender.com/api/rooms/${data?._id}/`);
 
       // setTimeout(() => {
       //   window.location.reload();
@@ -31,7 +31,7 @@ const DeleteBtn = ({ data, loading }) => {
 const Rooms = () => {
 
       const { data, loading, reFetch, error } = useFetch(
-        "http://localhost:5000/api/rooms"
+        "https://booking-app-api-bvpw.onrender.com/api/rooms"
   );
     
     return (
