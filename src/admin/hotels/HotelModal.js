@@ -42,7 +42,7 @@ const HotelModal = ({ data, loading, reFetch, btnName, addHotel }) => {
 
       ...info,
       photos: imageList,
-    };
+    };  
 
     try {
       await axios.post(
