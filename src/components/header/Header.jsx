@@ -71,18 +71,18 @@ const Header = ({ type }) => {
               <div className="search-wrapper">
                 <h2 className="searchTitle">Find Hotels and Resorts</h2>
                 <div className="headerSearch row">
-                  <div className="col-xl-3">
+                  <div className="col-lg-3 col-md-6 mb-lg-0 mb-3">
                     <div className="headerSearchItem headerItemBorder ">
                       <FontAwesomeIcon icon={faBed} className="headerIcon" />
                       <input
                         type="text"
                         placeholder="Where are you going?"
                         className="headerSearchInput"
-                        onChange={(e) => setDestination(e.target.value)}
+                        onChange={(e) => setDestination(e.target.value?.toLowerCase())}
                       />
                     </div>
                 </div>
-                  <div className="col-xl-4">
+                  <div className="col-lg-4 col-md-6 mb-lg-0 mb-3">
                     <div className="headerSearchItem headerItemBorder ">
                       <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                       <span className="headerSearchText" onClick={() => setOpenDate(!openDate)}
@@ -102,7 +102,7 @@ const Header = ({ type }) => {
                       )}
                     </div>
                 </div>
-                  <div className="col-xl-3">
+                  <div className="col-lg-3 col-md-6 mb-lg-0 mb-3">
                     <div className="headerSearchItem headerItemBorder " >
                       <FontAwesomeIcon icon={faPerson} className="headerIcon" />
                       <span className="headerSearchText" onClick={() => setOpenOptions(!openOptions)}
@@ -176,7 +176,7 @@ const Header = ({ type }) => {
                       )}
                     </div>
                  </div>
-                  <div className="col-xl-2">
+                  <div className="col-lg-2 col-md-6 mb-lg-0 mb-3">
                     <div className="searchBtnWrapper">
                       <button className="btn headerBtn searchBtn" disabled={!destination} onClick={handleSearch}>
                         Search

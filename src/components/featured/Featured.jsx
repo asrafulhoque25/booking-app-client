@@ -33,7 +33,7 @@ const stars = Array(5).fill(0);
           {
             data?.map((item, index) =>{
               return (
-                  <div className="col-xl-4">
+                  <div className="col-md-4 col-sm-6">
                       <div className="featureWrapper">
                           <img src={item?.photos?.[0] ? item?.photos?.[0] : Hotel} className="img-fluid featureImg" alt="img" />
                           <div className="featureContent">

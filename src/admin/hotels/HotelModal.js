@@ -123,12 +123,12 @@ const HotelModal = ({ data, loading, reFetch, btnName, addHotel }) => {
     if (addHotel) {
       setInfo((prevData) => ({
         ...prevData,
-        [name]: value,
+        [name]: value?.toLowerCase(),
       }));
     } else {
        setEditData((prevData) => ({
-         ...prevData,
-         [name]: value,
+           ...prevData,
+           [name]: value?.toLowerCase(),
        }));
     }
   };

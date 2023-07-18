@@ -34,7 +34,7 @@ const List = () => {
                       <h1 className="lsTitle">Search</h1>
                       <div className="lsItem">
                           <label>Destination</label>
-                          <input placeholder={destination} type="text" onChange={(e) => setDestination(e.target.value)} />
+                          <input placeholder={destination} type="text" onChange={(e) => setDestination(e.target.value?.toLowerCase())} />
                       </div>
                       <div className="lsItem">
                           <label>Check-in Date</label>
